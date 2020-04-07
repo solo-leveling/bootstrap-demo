@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="navbar navbar-expand-lg navbar-dark bg-dark my-4">
+            <a href="#" class="navbar-brand">Admin Panel</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#myNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-user" aria-hidden="true"></i> Username</a></li>
+                <li class="nav-item"><a href="#" class="btn btn-primary"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a></li>
+            </ul>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-lg-3">
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="index.html" class="nav-link">Dashboard</a></li>
+                    <li class="list-group-item collapse"><a href="#mydrop" class="nav-link collapse-toggle special" data-toggle="collapse" aria-expanded="false">Employees <i class="fa fa-caret-right float-right mt-1" aria-hidden="true"></i></a>
+                        <div class="collapse" id="mydrop">
+                            <div class="dropdown-divider"></div>
+                            <a class="nav-link ml-4" href="add_employee.html"><i class="fa fa-plus" aria-hidden="true"></i> Add</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="nav-link ml-4" href="employee_list.html"><i class="fa fa-list" aria-hidden="true"></i> List</a>
+                        </div> 
+                    </li>
+                    <li class="list-group-item collapse"><a href="#mydrop1" class="nav-link collapse-toggle special1" data-toggle="collapse" aria-expanded="false">Users <i class="fa fa-caret-right float-right mt-1" aria-hidden="true"></i></a>
+                        <div class="collapse" id="mydrop1">
+                            <div class="dropdown-divider"></div>
+                            <a class="nav-link ml-4" href="add_user.html"><i class="fa fa-plus" aria-hidden="true"></i> Add</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="nav-link ml-4" href="user_list.html"><i class="fa fa-list" aria-hidden="true"></i> List</a>
+                        </div> 
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-9">
+                <div class="col-lg-12">
+                    <div class="card">  
+                        <div class="card-header"> 
+                            <h1 class="h4">Employees</h1>                   
+                    </div>
+                    <div class="card-title">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Moblie</th>
+                                <th scope="col">Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">Hein Htet</th>
+                                <td>09791872207</td>
+                                <td><button class="btn btn-sm btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>&nbsp;&nbsp;<button class="btn btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+                              </tr>
+                            </tbody>
+                            <tr>
+                                <th scope="row">Hein Htet</th>
+                                <td>09791872207</td>
+                                <td><button class="btn btn-sm btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>&nbsp;&nbsp;<button class="btn btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+                              </tr>
+                            <tr>
+                                <th scope="row">Hein Htet</th>
+                                <td>09791872207</td>
+                                <td><button class="btn btn-sm btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>&nbsp;&nbsp;<button class="btn btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></button class="btn btn-danger"></td>
+                            </tr>
+                          </table>
+                    </div>
+                    <div class="card-body">
+                                
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+    
+   
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+          $("#mydrop").on("hide.bs.collapse", function(){
+            $(".special").html('Employees <i class="fa fa-caret-right float-right" aria-hidden="true"></i>');
+          });
+          $("#mydrop").on("show.bs.collapse", function(){
+            $(".special").html('Employees <i class="fa fa-caret-down float-right" aria-hidden="true"></i>');
+          });
+          $("#mydrop1").on("hide.bs.collapse", function(){
+            $(".special1").html('Users <i class="fa fa-caret-right float-right" aria-hidden="true"></i>');
+          });
+          $("#mydrop1").on("show.bs.collapse", function(){
+            $(".special1").html('Users <i class="fa fa-caret-down float-right" aria-hidden="true"></i>');
+          });
+        });
+    </script>  
+</body>
+</html>
